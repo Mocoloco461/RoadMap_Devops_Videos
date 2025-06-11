@@ -31,6 +31,13 @@
     a:hover {
       text-decoration: underline;
     }
+    .watched-checkbox {
+      margin-left: 8px;
+    }
+    li.watched a {
+      text-decoration: line-through;
+      color: #777;
+    }
   </style>
 </head>
 <body>
@@ -103,6 +110,28 @@
     document.querySelectorAll('a').forEach(link => {
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer'); // להגנה נוספת
+    });
+
+    document.querySelectorAll('li > a').forEach(link => {
+      const li = link.parentElement;
+      const key = 'watched_' + encodeURIComponent(link.href);
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.className = 'watched-checkbox';
+      if (localStorage.getItem(key) === 'true') {
+        checkbox.checked = true;
+        li.classList.add('watched');
+      }
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          localStorage.setItem(key, 'true');
+          li.classList.add('watched');
+        } else {
+          localStorage.removeItem(key);
+          li.classList.remove('watched');
+        }
+      });
+      li.appendChild(checkbox);
     });
   </script>
 </body>
