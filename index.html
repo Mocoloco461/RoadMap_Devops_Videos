@@ -150,24 +150,53 @@
       link.setAttribute('rel', 'noopener noreferrer');
     });
 
+    function getWatchedItems() {
+      let data = {};
+      try {
+        data = JSON.parse(localStorage.getItem('watchedItems')) || {};
+      } catch (e) {}
+      if (!Object.keys(data).length) {
+        const match = document.cookie.match(/(?:^|; )watchedItems=([^;]*)/);
+        if (match) {
+          try {
+            data = JSON.parse(decodeURIComponent(match[1]));
+          } catch (e) {}
+        }
+      }
+      return data;
+    }
+
+    function saveWatchedItems(data) {
+      try {
+        localStorage.setItem('watchedItems', JSON.stringify(data));
+      } catch (e) {}
+      document.cookie =
+        'watchedItems=' +
+        encodeURIComponent(JSON.stringify(data)) +
+        '; max-age=31536000; path=/';
+    }
+
+    const watched = getWatchedItems();
+
     document.querySelectorAll('li > a').forEach(link => {
       const li = link.parentElement;
-      const key = 'watched_' + encodeURIComponent(link.href);
+      const key = encodeURIComponent(link.href);
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.className = 'watched-checkbox';
-      if (localStorage.getItem(key) === 'true') {
+      if (watched[key]) {
         checkbox.checked = true;
         li.classList.add('watched');
       }
       checkbox.addEventListener('change', () => {
         if (checkbox.checked) {
-          localStorage.setItem(key, 'true');
+          watched[key] = true;
           li.classList.add('watched');
         } else {
-          localStorage.removeItem(key);
+          delete watched[key];
           li.classList.remove('watched');
         }
+        saveWatchedItems(watched);
       });
       li.appendChild(checkbox);
     });
