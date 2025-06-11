@@ -99,11 +99,11 @@
     <li><a href="https://www.youtube.com/watch?v=2fPgKvDBfbs">Virtual Private Cloud (VPC)</a></li>
   </ul>
 
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer'); // להגנה נוספת
+    });
+  </script>
 </body>
-<script>
-  document.querySelectorAll('a').forEach(link => {
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer'); // להגנה נוספת
-  });
-</script>
 </html>
