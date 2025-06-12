@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>שלב 4: אבטחת מידע ופרטיות</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>שלב 4: אבטחת מידע ופרטיות</h1>
+  </header>
+  <main>
+    <section class="section">
+      <p id="progress"></p>
+      <iframe id="videoFrame" allowfullscreen></iframe>
+      <ul id="videoList"></ul>
+    </section>
+    <a href="../index.html">חזרה לרשימת הקטגוריות</a>
+  </main>
+  <script src="../script.js"></script>
+  <script>
+    const categoryId = 'stage4';
+    const videos = [
+      {id: 'R-JUOpCgTZc', title: 'VPN Explained'},
+      {id: 'xTH1ZA_qUvA', title: 'IPsec'},
+      {id: 'kDEX1HXybrU', title: 'Firewall'},
+      {id: 'RXXRguaHZs0', title: 'Proxy vs Reverse Proxy'},
+      {id: 'dqlzQXo1wqo', title: 'What is a DMZ?'},
+      {id: 'ilhGh9CEIwM', title: 'DDoS Attack'}
+    ];
+    setupCategory(categoryId, videos);
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>שלב 3: כלים ופיקוד</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>שלב 3: כלים ופיקוד</h1>
+  </header>
+  <main>
+    <section class="section">
+      <p id="progress"></p>
+      <iframe id="videoFrame" allowfullscreen></iframe>
+      <ul id="videoList"></ul>
+    </section>
+    <a href="../index.html">חזרה לרשימת הקטגוריות</a>
+  </main>
+  <script src="../script.js"></script>
+  <script>
+    const categoryId = 'stage3';
+    const videos = [
+      {id: 'Jfq_BYhxvy0', title: 'Windows Command Line Tools'},
+      {id: 'IIicPE38O-s', title: 'PING Command'},
+      {id: 'up3bcBLZS74', title: 'TRACERT Explained'},
+      {id: '8UZFpCQeXnM', title: 'NETSTAT Command'},
+      {id: 'ZKhorleA5aA', title: 'IPCONFIG Explained'}
+    ];
+    setupCategory(categoryId, videos);
+  </script>
+</body>
+</html>

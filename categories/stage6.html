@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>שלב 6: נושאים מתקדמים ותשתיות</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>שלב 6: נושאים מתקדמים ותשתיות</h1>
+  </header>
+  <main>
+    <section class="section">
+      <p id="progress"></p>
+      <iframe id="videoFrame" allowfullscreen></iframe>
+      <ul id="videoList"></ul>
+    </section>
+    <a href="../index.html">חזרה לרשימת הקטגוריות</a>
+  </main>
+  <script src="../script.js"></script>
+  <script>
+    const categoryId = 'stage6';
+    const videos = [
+      {id: 'nhhfSBm6v4A', title: 'CDN Explained'},
+      {id: 'jC6MJTh9fRE', title: 'VLAN'},
+      {id: '6_giEv20En0', title: 'Subnets vs VLANs'},
+      {id: '6MW5P6Ci7lw', title: 'Spanning Tree Protocol'},
+      {id: 'CGmTvukObOw', title: 'Routing Tables'},
+      {id: '2fPgKvDBfbs', title: 'Virtual Private Cloud (VPC)'}
+    ];
+    setupCategory(categoryId, videos);
+  </script>
+</body>
+</html>
