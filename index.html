@@ -4,70 +4,7 @@
   <meta charset="UTF-8">
   <title>מפת דרכים ללימוד DevOps</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #2062af;
-      --secondary-color: #0aa7b1;
-      --bg-color: #f4f7fa;
-      --card-bg: #ffffff;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      direction: rtl;
-      margin: 0;
-      padding: 0;
-      background: var(--bg-color);
-      color: #333;
-      line-height: 1.7;
-    }
-    header {
-      background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    .section {
-      background: var(--card-bg);
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 20px 30px;
-      margin-bottom: 25px;
-    }
-    .section h2 {
-      margin-top: 0;
-      color: var(--primary-color);
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-    }
-    ul {
-      list-style-type: square;
-      padding-right: 20px;
-    }
-    a {
-      color: var(--secondary-color);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .watched-checkbox {
-      margin-left: 6px;
-      transform: scale(1.1);
-    }
-    li.watched a {
-      text-decoration: line-through;
-      color: #999;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -75,131 +12,16 @@
   </header>
   <main>
     <section class="section">
-      <h2>🟢 שלב 1: יסודות בתקשורת מחשבים ורשתות</h2>
+      <h2>בחר קטגוריה</h2>
       <ul>
-        <li><a href="https://www.youtube.com/watch?v=NyZWSvSj8ek">LAN, WAN, SUBNET - EXPLAINED</a></li>
-        <li><a href="https://www.youtube.com/watch?v=4_zSIXb7tLQ">Network Types: LAN, WAN, PAN, CAN, MAN, SAN, WLAN</a></li>
-        <li><a href="https://www.youtube.com/watch?v=1z0ULvg_pW8">Hub, Switch, & Router Explained</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ThdO9beHhpA">IP Address - IPv4 vs IPv6</a></li>
-        <li><a href="https://www.youtube.com/watch?v=s_Ntt6eTn94">Subnet Mask</a></li>
-        <li><a href="https://www.youtube.com/watch?v=pCcJFdYNamc">Default Gateway</a></li>
-        <li><a href="https://www.youtube.com/watch?v=TIiQiw7fpsU">MAC Address</a></li>
-        <li><a href="https://www.youtube.com/watch?v=C2FrTZxi_NI">Collision Domain vs Broadcast Domain</a></li>
-      </ul>
-    </section>
-    <section class="section">
-      <h2>🟡 שלב 2: פרוטוקולים ותקשורת נתונים</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=KjD3KANH-xc">Data Packets</a></li>
-        <li><a href="https://www.youtube.com/watch?v=uwoD5YsGACg">TCP vs UDP</a></li>
-        <li><a href="https://www.youtube.com/watch?v=cn8Zxh9bPio">ARP</a></li>
-        <li><a href="https://www.youtube.com/watch?v=FTUV0t6JaDA">NAT</a></li>
-        <li><a href="https://www.youtube.com/watch?v=e6-TaH5bkjo">DHCP</a></li>
-        <li><a href="https://www.youtube.com/watch?v=HnUDtycXSNE">DNS Records</a></li>
-        <li><a href="https://www.youtube.com/watch?v=mpQZVYPuDGU">How DNS Server Works</a></li>
-        <li><a href="https://www.youtube.com/watch?v=hExRDVZHhig">SSL, TLS, HTTP, HTTPS</a></li>
-      </ul>
-    </section>
-    <section class="section">
-      <h2>🔵 שלב 3: כלים ופיקוד</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=Jfq_BYhxvy0">Windows Command Line Tools</a></li>
-        <li><a href="https://www.youtube.com/watch?v=IIicPE38O-s">PING Command</a></li>
-        <li><a href="https://www.youtube.com/watch?v=up3bcBLZS74">TRACERT Explained</a></li>
-        <li><a href="https://www.youtube.com/watch?v=8UZFpCQeXnM">NETSTAT Command</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ZKhorleA5aA">IPCONFIG Explained</a></li>
-      </ul>
-    </section>
-    <section class="section">
-      <h2>🟠 שלב 4: אבטחת מידע ופרטיות</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=R-JUOpCgTZc">VPN Explained</a></li>
-        <li><a href="https://www.youtube.com/watch?v=xTH1ZA_qUvA">IPsec</a></li>
-        <li><a href="https://www.youtube.com/watch?v=kDEX1HXybrU">Firewall</a></li>
-        <li><a href="https://www.youtube.com/watch?v=RXXRguaHZs0">Proxy vs Reverse Proxy</a></li>
-        <li><a href="https://www.youtube.com/watch?v=dqlzQXo1wqo">What is a DMZ?</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ilhGh9CEIwM">DDoS Attack</a></li>
-      </ul>
-    </section>
-    <section class="section">
-      <h2>🟣 שלב 5: שרתים, אחסון ווירטואליזציה</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=UjCDWCeHCzY">What is a Server?</a></li>
-        <li><a href="https://www.youtube.com/watch?v=UBVVq-xz5i0">Virtualization</a></li>
-        <li><a href="https://www.youtube.com/watch?v=eyNBf1sqdBQ">VM vs Containers</a></li>
-        <li><a href="https://www.youtube.com/watch?v=_a6us8kaq0g">Cloud Computing</a></li>
-        <li><a href="https://www.youtube.com/watch?v=3yZDDr0JKVc">NAS vs SAN</a></li>
-        <li><a href="https://www.youtube.com/watch?v=U-OCdTeZLac">RAID Levels</a></li>
-      </ul>
-    </section>
-    <section class="section">
-      <h2>🟤 שלב 6: נושאים מתקדמים ותשתיות</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=nhhfSBm6v4A">CDN Explained</a></li>
-        <li><a href="https://www.youtube.com/watch?v=jC6MJTh9fRE">VLAN</a></li>
-        <li><a href="https://www.youtube.com/watch?v=6_giEv20En0">Subnets vs VLANs</a></li>
-        <li><a href="https://www.youtube.com/watch?v=6MW5P6Ci7lw">Spanning Tree Protocol</a></li>
-        <li><a href="https://www.youtube.com/watch?v=CGmTvukObOw">Routing Tables</a></li>
-        <li><a href="https://www.youtube.com/watch?v=2fPgKvDBfbs">Virtual Private Cloud (VPC)</a></li>
+        <li><a href="categories/stage1.html">🟢 שלב 1: יסודות בתקשורת מחשבים ורשתות</a></li>
+        <li><a href="categories/stage2.html">🟡 שלב 2: פרוטוקולים ותקשורת נתונים</a></li>
+        <li><a href="categories/stage3.html">🔵 שלב 3: כלים ופיקוד</a></li>
+        <li><a href="categories/stage4.html">🟠 שלב 4: אבטחת מידע ופרטיות</a></li>
+        <li><a href="categories/stage5.html">🟣 שלב 5: שרתים, אחסון ווירטואליזציה</a></li>
+        <li><a href="categories/stage6.html">🟤 שלב 6: נושאים מתקדמים ותשתיות</a></li>
       </ul>
     </section>
   </main>
-  <script>
-    document.querySelectorAll('a').forEach(link => {
-      link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'noopener noreferrer');
-    });
-
-    function getWatchedItems() {
-      let data = {};
-      try {
-        data = JSON.parse(localStorage.getItem('watchedItems')) || {};
-      } catch (e) {}
-      if (!Object.keys(data).length) {
-        const match = document.cookie.match(/(?:^|; )watchedItems=([^;]*)/);
-        if (match) {
-          try {
-            data = JSON.parse(decodeURIComponent(match[1]));
-          } catch (e) {}
-        }
-      }
-      return data;
-    }
-
-    function saveWatchedItems(data) {
-      try {
-        localStorage.setItem('watchedItems', JSON.stringify(data));
-      } catch (e) {}
-      document.cookie =
-        'watchedItems=' +
-        encodeURIComponent(JSON.stringify(data)) +
-        '; max-age=31536000; path=/';
-    }
-
-    const watched = getWatchedItems();
-
-    document.querySelectorAll('li > a').forEach(link => {
-      const li = link.parentElement;
-      const key = encodeURIComponent(link.href);
-      const checkbox = document.createElement('input');
-      checkbox.type = 'checkbox';
-      checkbox.className = 'watched-checkbox';
-      if (watched[key]) {
-        checkbox.checked = true;
-        li.classList.add('watched');
-      }
-      checkbox.addEventListener('change', () => {
-        if (checkbox.checked) {
-          watched[key] = true;
-          li.classList.add('watched');
-        } else {
-          delete watched[key];
-          li.classList.remove('watched');
-        }
-        saveWatchedItems(watched);
-      });
-      li.appendChild(checkbox);
-    });
-  </script>
 </body>
 </html>

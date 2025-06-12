@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>שלב 2: פרוטוקולים ותקשורת נתונים</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>שלב 2: פרוטוקולים ותקשורת נתונים</h1>
+  </header>
+  <main>
+    <section class="section">
+      <p id="progress"></p>
+      <iframe id="videoFrame" allowfullscreen></iframe>
+      <ul id="videoList"></ul>
+    </section>
+    <a href="../index.html">חזרה לרשימת הקטגוריות</a>
+  </main>
+  <script src="../script.js"></script>
+  <script>
+    const categoryId = 'stage2';
+    const videos = [
+      {id: 'KjD3KANH-xc', title: 'Data Packets'},
+      {id: 'uwoD5YsGACg', title: 'TCP vs UDP'},
+      {id: 'cn8Zxh9bPio', title: 'ARP'},
+      {id: 'FTUV0t6JaDA', title: 'NAT'},
+      {id: 'e6-TaH5bkjo', title: 'DHCP'},
+      {id: 'HnUDtycXSNE', title: 'DNS Records'},
+      {id: 'mpQZVYPuDGU', title: 'How DNS Server Works'},
+      {id: 'hExRDVZHhig', title: 'SSL, TLS, HTTP, HTTPS'}
+    ];
+    setupCategory(categoryId, videos);
+  </script>
+</body>
+</html>
