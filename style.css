@@ -101,8 +101,12 @@ iframe {
 }
 
 #videoList li a {
-  flex: 1;
   color: #164a8d;
+  font-weight: 700;
+}
+
+.video-item-content {
+  flex: 1;
 }
 
 /* Modern category grid */

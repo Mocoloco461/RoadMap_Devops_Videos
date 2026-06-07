@@ -69,18 +69,21 @@ function setupCategory(categoryId, videos) {
 
   videos.forEach((video, index) => {
     const li = document.createElement('li');
+    const content = document.createElement('div');
+    content.className = 'video-item-content';
     const link = document.createElement('a');
     link.href = '#';
     link.textContent = `${index + 1}. ${video.title}`;
     const meta = document.createElement('span');
     meta.className = 'video-meta';
     meta.textContent = getVideoSummary(video);
-    link.appendChild(meta);
     link.addEventListener('click', e => {
       e.preventDefault();
       loadVideo(index);
     });
-    li.appendChild(link);
+    content.appendChild(link);
+    content.appendChild(meta);
+    li.appendChild(content);
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
