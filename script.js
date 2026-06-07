@@ -25,14 +25,17 @@ function saveWatchedItems(data) {
 }
 
 function setupCategory(categoryId, videos) {
-  const DEFAULT_VIDEO_SUMMARY = 'סקירה כללית של נושא הסרטון.';
+  const FALLBACK_VIDEO_SUMMARY = 'סקירה כללית של נושא הסרטון.';
   const watched = getWatchedItems();
   const list = document.getElementById('videoList');
   const frame = document.getElementById('videoFrame');
   const progress = document.getElementById('progress');
-  const videoSummary = document.createElement('p');
-  videoSummary.id = 'videoSummary';
-  progress.insertAdjacentElement('afterend', videoSummary);
+  let videoSummary = document.getElementById('videoSummary');
+  if (!videoSummary) {
+    videoSummary = document.createElement('p');
+    videoSummary.id = 'videoSummary';
+    progress.insertAdjacentElement('afterend', videoSummary);
+  }
   let current = 0;
   const rows = [];
 
@@ -54,7 +57,7 @@ function setupCategory(categoryId, videos) {
       { match: /(cdn)/, summary: 'שיפור ביצועים והפצת תוכן גלובלית.' }
     ];
     const found = topics.find(topic => topic.match.test(label));
-    return found ? found.summary : DEFAULT_VIDEO_SUMMARY;
+    return found ? found.summary : FALLBACK_VIDEO_SUMMARY;
   }
 
   function loadVideo(index) {
