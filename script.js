@@ -25,6 +25,7 @@ function saveWatchedItems(data) {
 }
 
 function setupCategory(categoryId, videos) {
+  const DEFAULT_VIDEO_SUMMARY = 'סקירה כללית של נושא הסרטון.';
   const watched = getWatchedItems();
   const list = document.getElementById('videoList');
   const frame = document.getElementById('videoFrame');
@@ -53,7 +54,7 @@ function setupCategory(categoryId, videos) {
       { match: /(cdn)/, summary: 'שיפור ביצועים והפצת תוכן גלובלית.' }
     ];
     const found = topics.find(topic => topic.match.test(label));
-    return found ? found.summary : 'סקירה כללית של נושא הסרטון.';
+    return found ? found.summary : DEFAULT_VIDEO_SUMMARY;
   }
 
   function loadVideo(index) {
