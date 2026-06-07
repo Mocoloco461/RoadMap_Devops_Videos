@@ -53,7 +53,7 @@ function setupCategory(categoryId, videos) {
       { match: /(cdn)/, summary: 'שיפור ביצועים והפצת תוכן גלובלית.' }
     ];
     const found = topics.find(topic => topic.match.test(label));
-    return found ? found.summary : `מיקוד הסרטון: ${video.title}`;
+    return found ? found.summary : 'סקירה כללית של נושא הסרטון.';
   }
 
   function loadVideo(index) {
