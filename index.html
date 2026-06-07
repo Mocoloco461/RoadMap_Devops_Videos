@@ -2,14 +2,15 @@
 <html lang="he">
 <head>
   <meta charset="UTF-8">
-  <title>מפת דרכים ללימוד DevOps</title>
+  <title>מסלול לימוד רשתות ותשתיות DevOps</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1CmN1S2TU1sdSkrzE8zlH6ZiYze2h4MxNZ1PyMXBhK7tJ5Gvn8HQ9QCV0b9HZjQsv5xkY0JjPE0V4cJq2F+AA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>מפת דרכים ללימוד DevOps</h1>
+    <h1>מסלול לימוד רשתות ותשתיות DevOps</h1>
+    <p class="header-subtitle">כל שלב כולל תקציר נושאים כדי להבין מהר מה תלמדו בכל סט סרטונים.</p>
   </header>
   <main>
     <section class="section">
@@ -17,43 +18,79 @@
       <div class="category-grid modern-grid">
         <a class="category-card stage1" href="categories/stage1.html">
           <div class="content">
-            <div class="stage-num">שלב 1</div>
-            <div class="title">יסודות בתוכנות מחשבים ורשתות</div>
+            <div class="stage-num">שלב 1 · יסודות רשת</div>
+            <div class="title">מושגי בסיס ותשתית רשת</div>
+            <p class="card-subtitle">מתחילים מהיסודות שעליהם נשען כל עולם ה‑DevOps.</p>
+            <ul class="card-topics">
+              <li>LAN / WAN וסוגי רשתות</li>
+              <li>IP, Subnet, Gateway, MAC</li>
+              <li>Hub, Switch, Router</li>
+            </ul>
           </div>
           <i class="fas fa-network-wired icon-bg" aria-hidden="true"></i>
         </a>
         <a class="category-card stage2" href="categories/stage2.html">
           <div class="content">
-            <div class="stage-num">שלב 2</div>
-            <div class="title">פרוטוקולים ותקשורת נתונים</div>
+            <div class="stage-num">שלב 2 · פרוטוקולים ושירותים</div>
+            <div class="title">איך מידע זורם ברשת</div>
+            <p class="card-subtitle">הבנה של חוקי התקשורת והשירותים המרכזיים באינטרנט.</p>
+            <ul class="card-topics">
+              <li>TCP/UDP ו‑Packets</li>
+              <li>DNS, DHCP, NAT, ARP</li>
+              <li>HTTP/S, SSL/TLS</li>
+            </ul>
           </div>
           <i class="fas fa-project-diagram icon-bg" aria-hidden="true"></i>
         </a>
         <a class="category-card stage3" href="categories/stage3.html">
           <div class="content">
-            <div class="stage-num">שלב 3</div>
-            <div class="title">כלים ופיקוד</div>
+            <div class="stage-num">שלב 3 · כלי אבחון</div>
+            <div class="title">שליטה בפקודות רשת</div>
+            <p class="card-subtitle">לומדים לבדוק תקלות ולנתח חיבוריות כמו אנשי תשתיות.</p>
+            <ul class="card-topics">
+              <li>CLI בסיסי ב‑Windows</li>
+              <li>PING, TRACERT, NETSTAT</li>
+              <li>IPCONFIG ואבחון תקשורת</li>
+            </ul>
           </div>
           <i class="fas fa-terminal icon-bg" aria-hidden="true"></i>
         </a>
         <a class="category-card stage4" href="categories/stage4.html">
           <div class="content">
-            <div class="stage-num">שלב 4</div>
-            <div class="title">שלב 4</div>
+            <div class="stage-num">שלב 4 · אבטחת רשת</div>
+            <div class="title">הגנה, פרטיות והקשחת תשתיות</div>
+            <p class="card-subtitle">עקרונות אבטחה שכל איש DevOps ותשתיות חייב להכיר.</p>
+            <ul class="card-topics">
+              <li>Firewall, VPN, IPsec</li>
+              <li>Proxy ו‑Reverse Proxy</li>
+              <li>DMZ והיכרות עם DDoS</li>
+            </ul>
           </div>
           <i class="fas fa-cogs icon-bg" aria-hidden="true"></i>
         </a>
         <a class="category-card stage5" href="categories/stage5.html">
           <div class="content">
-            <div class="stage-num">שלב 5</div>
-            <div class="title">שרתים, אחסון ווירטואליזציה</div>
+            <div class="stage-num">שלב 5 · שרתים וענן</div>
+            <div class="title">תשתיות חישוב, אחסון וירטואליזציה</div>
+            <p class="card-subtitle">המעבר מעולם הרשתות לסביבת Production מודרנית.</p>
+            <ul class="card-topics">
+              <li>שרתים ו‑Virtualization</li>
+              <li>Containers מול VM</li>
+              <li>Cloud, RAID, NAS/SAN</li>
+            </ul>
           </div>
           <i class="fas fa-server icon-bg" aria-hidden="true"></i>
         </a>
         <a class="category-card stage6" href="categories/stage6.html">
           <div class="content">
-            <div class="stage-num">שלב 6</div>
-            <div class="title">נושאים מתקדמים ותשתיות</div>
+            <div class="stage-num">שלב 6 · ארכיטקטורה מתקדמת</div>
+            <div class="title">סקיילינג ותכנון רשת מתקדם</div>
+            <p class="card-subtitle">נושאים שמכינים אתכם לעבודה בסביבות גדולות ומורכבות.</p>
+            <ul class="card-topics">
+              <li>CDN, VPC ו‑VLAN</li>
+              <li>Routing Tables</li>
+              <li>Spanning Tree ותכנון Segmentation</li>
+            </ul>
           </div>
           <i class="fas fa-sitemap icon-bg" aria-hidden="true"></i>
         </a>
